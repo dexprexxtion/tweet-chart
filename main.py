@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from geopy.geocoders import Nominatim
 
 version = 0.1
-number_of_tweets = 100
+number_of_tweets = 50
 
 load_dotenv()
 
@@ -36,28 +36,13 @@ for tweet in tweets:
 
 print("Locations dictionary loaded successfully.")
 
-geolocator = Nominatim(user_agent="tweet_chart")
-latitudes = []
-longitudes = []
-counts = []
-for location in locations:
-    try:
-        location_info = geolocator.geocode(location)
-        if location_info:
-            latitudes.append(location_info.latitude)
-            longitudes.append(location_info.longitude)
-            counts.append(locations[location])
-    except:
-        pass
-
-print("Geolocator job done.")
-print("Creating ScatterPlot")
-
-plt.scatter(longitudes, latitudes, s=counts, alpha=0.5)
-plt.xlabel("Longitude")
-plt.ylabel("Latitude")
+fig, ax = plt.subplots()
+ax.bar(locations.keys(), locations.values())
+plt.xticks(rotation=90)
+plt.xlabel("Location")
+plt.ylabel("Number of Tweets")
 plt.title("Locations of Tweets on #flutter")
+plt.tight_layout()
 plt.savefig("locations.png")
-plt.show()  
-
+plt.show()
 print("Finished.")
