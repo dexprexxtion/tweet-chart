@@ -7,6 +7,7 @@ from geopy.geocoders import Nominatim
 
 version = 0.1
 number_of_tweets = 50
+hashtag = "#flutter"
 
 load_dotenv()
 
@@ -20,7 +21,7 @@ api = tweepy.API(auth)
 print("Authenticated with OAuth Twitter API.")
 
 print("Searching for tweets...")
-tweets = tweepy.Cursor(api.search_tweets, q="#flutter").items(number_of_tweets)
+tweets = tweepy.Cursor(api.search_tweets, q=hashtag).items(number_of_tweets)
 print("Fetched ", number_of_tweets," tweets.")
 
 
