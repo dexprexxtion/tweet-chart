@@ -1,8 +1,15 @@
 # tweet-chart 🐦📊
 ## v1.0.0 🚀
 Fetch Tweets from Twitter and display them in a chart. Can be used for research purposes.
-
 >The code is ready for usage but is under development to add more features. 🚀
+
+## How to use
+---
+- Get your Twitter Developer Account API keys from https://developer.twitter.com/en/portal/dashboard.
+- Put them in the `.env.template` file.
+- Rename the file from `.env.template` to `.env`.
+- Now open `main.py` and modify the `hashtag` and `number_of_tweets` variables on Line 9 and 10 to your desired values.
+- Now run `main.py` in the terminal using python.
 
 ## Features To-Do ☑️
 [ ] Add visual UI
