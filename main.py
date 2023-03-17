@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from geopy.geocoders import Nominatim
 
-version = 0.1
+version = "1.0.0"
 number_of_tweets = 25
 hashtag = "#Oscars"
 
