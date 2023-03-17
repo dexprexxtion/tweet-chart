@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 from geopy.geocoders import Nominatim
 
 version = 0.1
-number_of_tweets = 50
-hashtag = "#flutter"
+number_of_tweets = 25
+hashtag = "#Oscars"
 
 load_dotenv()
 
